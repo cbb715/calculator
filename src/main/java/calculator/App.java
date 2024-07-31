@@ -54,7 +54,7 @@ public class App {
             case '/':
                 if (num2 != 0) {
                     result = num1 / num2;
-        }       else  {
+                } else {
                     System.out.println("분모에 0이 입력될 수 없습니다.");
                     return; // return을 쓰지 않아서 오류가 났었다.
                 }
@@ -63,7 +63,23 @@ public class App {
 
         System.out.println("결과: " + result);
 
+        // 1-4
+        // 반복의 종료를 알리는 "exit" 문자열을 입력하기 전까지 무한으로 계산을 진행하자.
+        // 반복문을 사용합니다. (e.g. for, while …)
+        // for (초기값; 조건문; 증가연산) { (연산) } : for문의 형태
+        // for(int i=0; i < 4; i++) 참고하자.
+        // while(조건문) { (연산) } : while문의 형태
+        // for문의 무한루프 : for(;;){}, while문의 무한루프 : while(true){}
+        // 안에 if문으로 조건을 걸어 빠져나올 수 있게 만들 수 있다.
 
+        while (true) {
+            System.out.println("더 계산하시겠습니까?");
+            if (sc.next().equals("exit") == true)
+                break;
 
+            num1 = sc.nextInt();
+            num2 = sc.nextInt();
+
+        }
     }
 }
